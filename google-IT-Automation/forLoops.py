@@ -8,6 +8,7 @@ def sum_squares(x):
     return sum
 
 print(sum_squares(10)) # Should be 285
+print(sum_squares(3)) # 0*0= 0, 1*1= 1, 2*2 = 4 so 0+1+4= 5
 
 def factorial(n):
     result = 1
@@ -49,3 +50,28 @@ def validate_users(users):
       print(user + " is invalid")
 
 validate_users(["purplecat"])  
+
+# Write a script that prints the first 10 cube numbers (x**3), starting with x=1 and ending with x=10.
+for x in range(1,11):
+    print(x**3)
+
+# Write a script that prints the multiples of 7 between 0 and 100. 
+# Print one multiple per line and avoid printing any numbers that aren't multiples of 7.
+# Remember that 0 is also a multiple of 7.
+# for n in range(101):
+#     if(n%7 == 0):
+#         print(n)
+
+for x in range(1, 10, 3):
+    print(x)
+
+
+for x in range(10):
+    for y in range(x):
+        print(y)
+
+def votes(params):
+	for vote in params:
+	    print("Possible option:" + vote)
+
+votes(["Yes","No","Maybe"])
