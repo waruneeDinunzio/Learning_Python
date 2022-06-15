@@ -48,3 +48,41 @@ print(initials("Universal Serial Bus")) # Should be: USB
 print(initials("local area network")) # Should be: LAN
 print(initials("Operating system")) # Should be: OS
 
+def replace_ending(sentence, old, new):
+	# Check if the old string is at the end of the sentence 
+	#old_string = sentence.split()
+	if sentence.endswith(old):
+		# Using i as the slicing index, combine the part
+		# of the sentence up to the matched string at the 
+		# end with the new string
+		i = len(old)
+		new_sentence = sentence[0:-i] + new
+		return new_sentence
+
+	# Return the original sentence if there is no match 
+	return sentence
+	
+print(replace_ending("It's raining cats and cats", "cats", "dogs")) 
+# Should display "It's raining cats and dogs"
+
+def is_palindrome(input_string):
+	# We'll create two strings, to compare them
+	new_string = ""
+	reverse_string = ""
+	# Traverse through each letter of the input string
+	for words in input_string:
+		# Add any non-blank letters to the 
+		# end of one string, and to the front
+		# of the other string. 
+		if words != " ":
+			new_string += words.lower()
+			reverse_string = words.lower() + reverse_string
+           
+	# Compare the strings
+	if new_string == reverse_string:
+		return True
+	return False
+
+print(is_palindrome("Never Odd or Even")) # Should be True
+print(is_palindrome("abc")) # Should be False
+print(is_palindrome("kayak")) # Should be True
