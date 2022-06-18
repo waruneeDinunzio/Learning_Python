@@ -38,10 +38,12 @@ for x in range(0, 101, 10):
 # For example, "123 Main Street", "1001 1st Ave", or "55 North Center Drive".
 def format_address(address_string):
   # Declare variables
-  stNumber= ""
-  stName = ""
+  address_split = address_string.split(" ",1)
+  address_number = address_split[0]
+  street_name = address_split[1]
+  #print(address_split)
   # Separate the address string into parts
-
+  
   # Traverse through the address parts
   #for __:
     # Determine if the address part is the
@@ -51,7 +53,7 @@ def format_address(address_string):
   # before returning the result?
   
   # Return the formatted string  
-  return "house number {} on street named {}".format(__)
+  return "house number {} on street named {}".format(address_number,street_name)
 
 print(format_address("123 Main Street"))
 # Should print: "house number 123 on street named Main Street"
@@ -61,17 +63,3 @@ print(format_address("1001 1st Ave"))
 
 print(format_address("55 North Center Drive"))
 # Should print "house number 55 on street named North Center Drive"
-
-
-# The highlight_word function changes the given word in a sentence to its upper-case version. 
-# For example, highlight_word("Have a nice day", "nice") returns "Have a NICE day".
-def highlight_word(sentence, word):
-    for newSentence in sentence:
-        if word in sentence:
-            
-        
-	return(___)
-
-print(highlight_word("Have a nice day", "nice"))
-print(highlight_word("Shhh, don't be so loud!", "loud"))
-print(highlight_word("Automating with Python is fun", "fun"))
