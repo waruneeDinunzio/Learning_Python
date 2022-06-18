@@ -86,3 +86,16 @@ def is_palindrome(input_string):
 print(is_palindrome("Never Odd or Even")) # Should be True
 print(is_palindrome("abc")) # Should be False
 print(is_palindrome("kayak")) # Should be True
+
+animal = "Hippopotamus"
+print(animal[3:6])
+print(animal[-5])
+print(animal[10:])
+
+def squares(start, end):
+	result = []
+	for number in range(start,end+1):
+		result.append(number*number)
+	return result
+print(squares(0,10))
+
