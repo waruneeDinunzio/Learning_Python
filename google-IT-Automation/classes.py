@@ -67,3 +67,13 @@ class Cats:
     print("Cat's name " + str(self.name) + " says '" + str(self.greeting) + "'")
 cute_cat = Cats("Garfild", "What's up?")
 cute_cat.greeting_cat()
+
+# docstring """"give the info you want to documented """"
+class Person:
+  def __init__(self, name):
+    self.name = name
+  def greeting(self):
+   # """Outputs a message with the name of the person"""
+    print("Hello! My name is {name}.".format(name=self.name)) 
+
+help(Person)
